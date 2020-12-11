@@ -48,10 +48,10 @@ while True:
                 print(prediction[1])
                 perc = prediction[1] + 55 # It gives us 99% similarity and we open connection with the bd
                 cv2.putText(im,'%s - %.0f' % (names[prediction[0]],prediction[1]),(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
-                user = names[prediction[0]]
-                # Ivan's Module
+                user = names[prediction[0]]               
                 # . . . BRING THE TEMPERATURE TO REGISTER IN THE BD . . .
-                temp = 0
+                temp = 32 # Test
+                # Arduino Connection #
                 # . . . ___________________________________________ . . .
                 from registroemail import search
                 email = search(user,temp)
