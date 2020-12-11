@@ -9,22 +9,22 @@ def sendemail(a, b):
     msg = EmailMessage()
     if b == 1:
         # Verificación de registro
-        msg.set_content('Hello\n\nFaceCamIIEG has recoginized ' + str(a) + ' with a confidence of ' + str(
+        msg.set_content('Hello\n\nFaceCam has recoginized ' + str(a) + ' with a confidence of ' + str(
             b) + '%' ' \n\nPlease verify the updated database.\n\nPlease do not reply this email as it is automated')
     else:
         # Verificación de salida
-        msg.set_content('Hello\n\nFaceCamIIEG has recoginized ' + str(a) + ' with a confidence of ' + str(
+        msg.set_content('Hello\n\nFaceCam has recoginized ' + str(a) + ' with a confidence of ' + str(
             b) + '%' ' \n\nPlease verify the updated database.\n\nPlease do not reply this email as it is automated')
 
     msg['Subject'] = 'Missing person report by FaceCamIIEG'
-    msg['From'] = "pdprodelfin@gmail.com"
-    msg['To'] = "yppr09@gmail.com"
-    #msg['To'] = "kofrran@gmail.com"
+    msg['From'] = "#@gmail.com"
+    msg['To'] = "#@gmail.com"
+   
 
 
     # Send the message via our own SMTP server.
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.login("pdprodelfin@gmail.com", "facereconiieg.")
+    server.login("#@gmail.com", "pass")
     server.send_message(msg)
     server.quit()
 
